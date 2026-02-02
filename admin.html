@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Login | Free Fire Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#0b0b12;
+color:#fff
+}
+.container{
+max-width:420px;
+margin:80px auto;
+background:#151520;
+padding:25px;
+border-radius:14px;
+box-shadow:0 0 20px rgba(255,152,0,.3)
+}
+h2{text-align:center;color:#ffb703}
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+font-size:16px
+}
+button{
+width:100%;
+padding:12px;
+background:#ff9800;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer
+}
+.note{
+font-size:13px;
+color:#aaa;
+text-align:center
+}
+
+/* DASHBOARD */
+#dashboard{
+display:none;
+max-width:900px;
+margin:40px auto
+}
+.card{
+background:#151520;
+padding:16px;
+border-radius:12px;
+margin:12px 0
+}
+.logout{
+background:#ff5252;
+color:#000
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="container" id="loginBox">
+<h2>🔐 Admin Login (OTP)</h2>
+
+<input type="tel" placeholder="Enter phone number">
+<button onclick="login()">Send OTP</button>
+
+<input type="text" placeholder="Enter OTP">
+<button onclick="verify()">Verify & Login</button>
+
+<p class="note">Abhi demo login hai (Firebase baad me)</p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard">
+<h2 style="text-align:center;color:#ffb703">📊 Admin Dashboard</h2>
+
+<div class="card">
+<h3>Total IDs</h3>
+<p>18 IDs listed</p>
+</div>
+
+<div class="card">
+<h3>Payments</h3>
+<p>Razorpay yahan connect hoga</p>
+</div>
+
+<div class="card">
+<button class="logout" onclick="logout()">Logout</button>
+</div>
+</div>
+
+<script>
+function login(){
+alert("OTP send (demo)");
+}
+
+function verify(){
+document.getElementById("loginBox").style.display="none";
+document.getElementById("dashboard").style.display="block";
+}
+
+function logout(){
+location.reload();
+}
+</script>
+
+</body>
+</html>
